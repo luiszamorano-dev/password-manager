@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Configurar PIN</title>
+</head>
+<body>
+    <h1>Configurar PIN de Seguridad</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.pin.label }}<br>
+            {{ form.pin(size=32) }}
+        </div>
+        <div>
+            {{ form.confirm_pin.label }}<br>
+            {{ form.confirm_pin(size=32) }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+    <a href="{{ url_for('routes.index') }}">Volver al inicio</a>
+</body>
+</html>

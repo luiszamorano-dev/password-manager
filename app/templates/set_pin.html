@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Definir o actualizar PIN de seguridad</h2>
+  <form method="POST">
+    {{ form.hidden_tag() }}
+    <div>
+      {{ form.pin.label }}<br>
+      {{ form.pin(size=32) }}
+    </div>
+    <div>
+      {{ form.confirm_pin.label }}<br>
+      {{ form.confirm_pin(size=32) }}
+    </div>
+    <div>
+      {{ form.submit(class="btn btn-primary") }}
+    </div>
+  </form>
+{% endblock %}
